@@ -1,0 +1,1304 @@
+
+/* BOX-SIZING */
+
+* {
+	box-sizing: border-box;
+}
+
+/* CLEARFIX */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* GENERAL STYLES */
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+p {
+	font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+	font-family: Montserrat, sans-serif;
+	font-size: 36px;
+	text-transform: uppercase;
+	color: #2b2b2b;
+	margin: 0;
+	font-weight: 500;
+}
+
+.top-text { 
+	color: #16bcf0;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.break {
+	display: block;
+}
+
+/* CSS TRIANGLE COMMON STYLES */
+
+.triangle-top-right,
+.triangle-bottom-left, 
+.triangle-bottom-right {
+	width: 0;
+	position: absolute;
+	transform: rotate(360deg);
+}
+
+.triangle-top-right {
+	top: 0;
+	left: 0;
+}
+
+.triangle-bottom-left {
+	bottom: 0;
+	left: 0;
+}
+
+.triangle-bottom-right {
+	bottom: 0;
+}
+
+/* TOP NAVIGATION BAR STYLES */
+
+nav {
+	background: #0d1f35;
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top:0;
+	z-index: 500;
+	overflow: hidden;
+}
+
+nav img {
+	float: left;
+	margin: 25px 0 0 100px;
+}
+
+nav ul {
+	text-transform: uppercase;
+	font-family: "Open Sans";
+	font-size: 15px;
+	color: white;
+	width: 40%;
+	float: right;
+	position: absolute;
+	right: 100px;
+	margin-top: 10px;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 3%;
+	letter-spacing: 1px;
+	transition: 0.5s all ease-in-out;
+}
+
+nav ul a {
+	color: white;
+}
+
+nav ul li:hover {
+	font-weight: bold;
+	letter-spacing: 0.6px;
+}
+
+nav ul li:hover {
+	text-shadow: 0px 0px 30px #0042FF;
+}
+
+.open-hours {
+	float: right;
+	background: #11bcf4;
+	height: 80px;
+	position: absolute;
+	right: 0;
+	width: 300px;
+	padding-left: 3%;
+}
+
+.open-hours .triangle-top-right {
+	border-top: 40px solid #0d1f35;
+	border-right: 20px solid transparent;
+	border-bottom: 40px solid transparent;
+	border-left: 20px solid #0d1f35;
+}
+
+.open-hours img {
+	float: left;
+	display: inline-block;
+	margin: 17px 0 0 30px;
+}
+
+p.opening-hours {
+	float: left;
+	display: inline-block;
+	margin: 17px 0 0 10px;
+	text-transform: uppercase;
+	color: white;
+}
+
+.opening-hours + p {
+	color: white;
+	clear: both;
+	margin: 45px auto;
+}
+
+
+/* :::::::::::::::::: INDEX.HTML ::::::::::::::::::::: */
+
+
+/* HEADER STYLES */
+
+.hero {
+	background: url(../Images/hero.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 750px;
+	padding-top: 280px;
+	overflow: hidden;
+}
+
+.get-ready, 
+.try-out {
+	width: 500px;
+	height: 55px;
+	background: #11bcf4;
+	margin:0 auto;
+	text-transform: uppercase;
+	text-align: center;
+	transform: skew(150deg);
+}
+
+.get-ready p, 
+.try-out p{
+	font-size: 19px;
+	font-family: Montserrat, sans-serif;
+	color: white;
+	line-height: 55px;
+	transform: skew(-150deg);
+}
+
+.change-yourself {
+	width: 50%;
+	height: 80px;
+	margin: 10px auto 0 auto;
+	background: #0d1f35;
+	text-transform: uppercase;
+	text-align: center;
+	transform: skew(150deg);
+	transition: 0.9s all ease-in-out;
+}
+
+.change-yourself:hover {
+	transform: scale(1.1) skew(150deg); 
+	background: #FF3100;
+}
+
+header a {
+	text-decoration: none;
+}
+
+.hero h1 {
+	font-size: 26px;
+	font-family: Montserrat, "Open Sans", sans-serif;
+	font-weight: normal;
+	color: white;
+	line-height: 80px;
+	transform: skew(-150deg);
+}
+
+.try-out {
+	width: 650px;
+	text-align: left;
+}
+
+.try-out p {
+	margin-left: 70px;
+}
+
+.fa-play-circle {
+	color: white;
+	font-size: 25px;
+	z-index: 100;
+	float: left;
+	transform: skew(-150deg);
+	margin: 15px 0 0 30px;
+}
+
+/* WHY CHOOSE US SECTION STYLES */
+
+.why-choose-us {
+	width: 100%;
+	height: 545px;
+	overflow: hidden;
+	/*background: gold;*/
+}
+
+.why-choose-wrapper {
+	width: 65%;
+	margin: auto;
+	/*background: yellow;*/
+	padding: 50px 0;
+}
+
+.why-choose-us h2 {
+	margin: 0;
+	padding-right: 20px;
+	border-right: 5px solid #11bcf4;
+	display: inline-block;
+	float: left;
+}
+
+.why-choose-us p {
+	font-size: 15px;
+	display: inline-block;
+	width: 60%;
+	margin-top: 0;
+	padding-left: 20px;
+	line-height: 23px;
+}
+
+.plans {
+	width: 100%;
+	height: 260px;
+	/*background: green;*/
+	clear:both;
+	margin-top: 30px;
+}
+
+.plan {
+	width: 25%; ?
+	height: 100%;
+	float: left;
+	position: relative;
+	text-align: center;
+	/*margin: 0 auto;*/
+}
+
+.plan p {
+ 	width: 100%;
+ 	padding: 0;
+ 	font-size: 17px;
+}
+
+.plan-1 {
+	/*background: blue;*/
+	/*margin-right: 3%;*/
+}
+
+.plan-2 {
+	/*background: magenta;*/
+	/*margin-right: 3%;*/
+}
+
+.plan-3 {
+	/*background: slategrey;*/
+	/*margin-right: 3%;*/
+}
+
+.plan-4 {
+	/*background: cyan;*/
+	/*float: right;*/
+}
+
+.plan-icon {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	position: absolute;
+	top: -30px;
+	right: -30px;
+	background: #0d1f35;
+	transition: 0.5s all ease-in-out;
+}
+
+.plan-icon:hover {
+	background: #0042FF;
+}
+
+.plan-icon img {
+	position: absolute;
+	top: 22px;
+	right: 15px;
+}
+
+.plan-icon img[alt*="dumbell"] {
+	transform: rotate(-20deg);
+	transition: 0.5s all ease-in-out;
+}
+
+.plan-icon:hover img[alt*="dumbell"] {
+	transform: rotate(30deg);
+}
+
+.plan-icon img[alt*="shoe"] {
+	transition: 0.5s all ease-in-out;
+}
+
+.plan-icon:hover img[alt*="shoe"] {
+	transform: rotate(360deg);
+}
+
+.plan-icon img[alt*="heart"] {
+	right: 10px;
+	transition: 0.5s all ease-in-out;
+}
+
+.plan-icon:hover img[alt*="heart"] {
+	transform: scale(1.2);
+}
+.goal,
+.goal-overlay {
+	width: 135px;
+	height: 135px;
+	margin: 70px auto;
+	border-radius: 50%;
+}
+
+.goal {
+	background: #e0e0e0;
+	text-align: center;
+	transition: 0.5s all ease;
+	border: 2px solid transparent;
+}
+
+.goal-overlay {
+	position: relative;
+	background: transparent;
+	z-index: 200;
+}
+
+.goal::before {
+	content: " ";
+	position: absolute;
+	z-index: -1;
+	top: .5px;
+	left: .5px;
+	right: .5px;
+	bottom: .5px;
+	border-radius: 50%;
+	border: 4px solid white;
+}
+
+.goal:hover {
+	transform: scale(1.1);
+}
+
+.goal-1:hover {
+	background: #FF523D;
+}
+
+.goal-2:hover {
+	background: #633FFF;
+}
+
+.goal-3:hover {
+	background: #65be3e;
+}
+
+.goal-4:hover {
+	background: #E89800;
+}
+
+.goal p {
+	text-transform: uppercase;
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	padding: 0;
+	margin-top: 43px;
+	width: 60%;
+ 	line-height: 20px;
+}
+
+.goal-3 p {
+	margin-top: 30px;
+}
+.price {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background: pink;
+	text-align: center;
+	position: absolute;
+	bottom: -40px;
+	left: -40px;
+	z-index: 100;
+	transition: 0.5s all ease;
+}
+
+.price:hover {
+	transform: scale(0.9);
+}
+
+.price-1,
+.price-3 {
+	background: #11bcf4;
+}
+
+.price-2 {
+	background: #eb6ef8;
+}
+
+.price-4 {
+	background: #fd682e;
+}
+
+.price p {
+	margin-top: 33px;
+	color: white;
+	font-family: "Open Sans", sans-serif;
+	font-size: 26px;
+	letter-spacing: -2px;
+	position:relative;
+}
+
+.smaller {
+	font-size: 15px;
+	line-height: 15px
+	letter-spacing: .5px;
+}
+
+.goal:hover .white-text {
+	color: white;
+}
+
+/* SWEATY GUY SECTION STYLES */
+
+.sweaty-guy {
+	width: 100%;
+	height: 440px;
+	position: relative;
+	overflow: hidden;
+}
+
+.sweaty-div-1 {
+	position: absolute;
+	float: left; 
+	background: #11bcf4;
+	width: 33%;
+	height: 100%;
+	text-align:center;
+}
+
+.sweaty-div-1 .fa-twitter {
+	/*width: 100%;*/
+	color: white;
+	font-size: 30px;
+	margin: 70px 300px 20px 300px;
+	transition: .5s all ease-in-out;
+}
+
+.sweaty-div-1 .fa-twitter:hover {
+	transform: scale(1.7);
+}
+.sweaty-div-1 p {
+	color: white;
+	font-size: 17px;
+	width: 80%;
+	margin: 50px 10%  30px 10%;
+	line-height: 35px;
+	position: relative;
+	z-index: 250;
+}
+
+.sweaty-div-1 p:nth-child(3) {
+	font-size: 15px;
+	
+}
+
+.sweaty-guy-image {
+	float: right;
+	width: 70%;
+	height: 100%;
+	background: url(../Images/sweaty-dude.png);
+	background-size: cover;
+	position: relative;
+	z-index: 150;
+}
+
+.sweaty-guy-triangle {
+	border-top: 220px solid #11bcf4;
+	border-right: 100px solid transparent;
+	border-bottom: 220px solid transparent;
+	border-left: 100px solid #11bcf4;
+	z-index: 200;
+}
+
+/* COURSES AND TRAINING SECTION STYLES */
+
+.courses-training {
+	width: 100%;
+	height: 690px;
+	background: white;
+	overflow: hidden;
+}
+
+.courses-wrapper {
+	width: 65%;
+	margin: auto;
+}
+
+.courses-training p {
+	margin: 0;
+}
+
+.courses-training p.top-text {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+.courses-training ul {
+	padding: 0;
+}
+
+.courses-training ul li {
+	display: inline-block;
+	width: 45%;
+	float: left;
+	padding-bottom: 100px;
+	padding-top: 20px;
+	border-bottom: 1px solid lightgrey;
+	position: relative;
+}
+
+.no-border {/* THIS ISN'T WORKING! */
+	border-bottom: 1px solid red;
+}
+
+.courses-training ul li p {
+	line-height: 30px;
+}
+
+.courses-training ul li p:first-child {
+	font-weight: bold;
+}
+
+.courses-training ul li button {
+	position: absolute;
+	bottom: 30px;
+	right: 0px;
+	background: white;
+	border-radius: 5px;
+	border: 1px solid lightgrey;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	font-size: 15px;
+	transition: 0.5s all ease-in-out;
+}
+
+.courses-training ul li button:hover {
+	background: #E8751C;
+} 
+
+.courses-training ul li:nth-child(2n+1) {
+	margin-right: 10%;
+}
+
+.courses-training ul li:nth-child(5),
+.courses-training ul li:nth-child(6) {
+	border-bottom: none;
+}
+
+/* SUCCESSFUL STORIES SECTION STYLES */
+
+.successful-stories,
+.training-requirements {
+	width: 100%;
+	height: 440px;
+	background: pink;
+	overflow: hidden;
+}
+
+.successful-div-1,
+.training-div-1 {
+	float: left;
+	background: white;
+	width: 61%;
+	height: 100%;
+	position: relative;
+	padding-left: 80px;
+	z-index: 200;
+}
+
+.successful-stories p,
+.training-requirements p {
+	margin-left: 22%;
+	line-height: 34px;
+	width: 82%;
+	z-index: 200;
+}
+
+.successful-stories p:nth-child(2),
+.training-requirements p:nth-child(2) {
+	font-size: 36px;
+	line-height: 55px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+
+.successful-stories p.top-text {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.successful-image,
+.training-image {
+	float: right;
+	width: 39%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	/*top: 0;
+	background: url(../Images/jenna-smith.png);
+	background-repeat: no-repeat;*/
+}
+
+.successful-triangle {
+	border-top: 220px solid white;
+	border-right: 100px solid transparent;
+	border-bottom: 220px solid transparent;
+	border-left: 100px solid white;
+	z-index: 150;
+	/*transform: rotate(360deg);*/
+}
+.successful-image img,
+.training-image img {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.successful-image ul {
+	position: absolute;
+	bottom: 0;
+	right: 20px;
+	margin-bottom: 18px;
+	list-style-type: none;
+	color: white;
+	font-weight: 100;
+}
+
+.successful-image ul li {
+	display: inline-block;
+	padding: 0 15px;
+}
+/* GYMS AND STUDIOS STYLES */
+
+.gyms-studios {
+	width: 100%;
+	height: 110px;
+	background: white;
+	overflow: hidden;
+}
+
+.gyms-studios p {
+	margin:0;
+	text-transform: uppercase;
+	color: white;
+	font-family: 15px;
+	line-height: 23px;
+}
+
+.gyms-studios p:first-child {
+	font-size: 30px;
+}
+
+.gyms-div-1 {
+	float: left;
+	width: 20%;
+	height: 100%;
+	background: #11bcf4;
+	padding-left: 35px;
+	padding-top: 40px;
+}
+
+.gyms-div-2 {
+	position: relative;
+	width: 80%;
+	height: 100%;
+	float: right;
+}
+.gyms-studios li {
+	display: inline-block;
+}
+
+.gyms-div-2 .triangle-bottom-left {
+	border-top: 55px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 55px solid #11bcf4;
+	border-left: 30px solid #11bcf4;
+}
+
+.gyms-div-2 li {
+	padding: 10px 80px;
+	/*margin-top: 15px;*/
+}
+
+.gyms-div-2 li:first-child {
+	padding-left: 100px;
+}
+
+.gyms-div-2 li:nth-child(2),
+.gyms-div-2 li:nth-child(3) { 
+	position: relative;
+	top: -7px;
+}
+
+img[alt*="Nordic"] {
+	transform: scale(1.3);
+}
+
+/* FOOTER SECTION STYLES */
+
+
+footer {
+	width: 100%;
+	height: 380px;
+	background: #0d1f35;
+	overflow: hidden;
+}
+
+.footer-wrapper {
+	width: 65%;
+	height: 100%;
+	background: #0d1f35;
+	margin: 0 auto;
+}
+
+.footer-top {
+	width: 100%;
+	height: 100px;
+	display: block;
+	background: #0d1f35;
+	border-bottom: 2px solid #4a5e76;
+}
+
+.footer-top h3:first-child {
+	line-height: 100px;
+}
+
+footer h3 {
+	margin: 0 0 12px 0;
+	display: inline-block;
+	text-transform: uppercase;
+	color: white;
+	font-size: 20px;
+	font-weight: 100;
+	line-height: 28px;
+}
+
+
+.bold {
+	font-weight: 600;
+}
+
+.facebook-logo {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: #3853d8;
+	border-radius: 2px;
+	margin-top: 0;
+	position: relative;
+	top: -10px;
+	left: 20px;
+}
+
+.fa-facebook {
+	color: white;
+	position: relative;
+	top: 7px;
+	left: 10px;
+}
+
+footer i.fa-twitter {
+	color: white;
+	font-size: 20px;
+	position: relative;
+	left: 40px;
+	bottom: 1	px;
+}
+
+.footer-row {
+	width: 25%;
+	height: 280px;
+	background: #0d1f35;
+	float: left;
+	margin: 0;
+	padding-top: 20px;
+}
+footer ul {
+	padding: 0;
+}
+footer li {
+	display: inline-block;
+}
+
+.footer-row-1 p {
+	color: #4a5e76;
+	font-size: 15px;
+}
+
+.footer-row-1 img {
+	margin-bottom: 12px;
+}
+
+.footer-row-1 ul {
+	float: left;
+	margin: 0;
+}
+
+.footer-row-1 li {
+	padding-right: 10px;
+}
+
+.footer-row-1 a {
+	color: #11bcf4;
+}
+
+.footer-row-2 li {
+	width: 50%;
+	float: left;
+	font-size: 15px;
+	color: #4a5e76;
+	padding: 6px 0;
+}
+
+.footer-row-3 li{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 100;
+	color: white;
+	width: 30%;
+	padding: 7px;
+	margin: 3px 0;
+	border-radius: 2px;
+	transition: 1s all ease-in-out;
+}
+
+.footer-row-3 li:nth-child(3n+1) {
+	margin-left: 0;
+}
+
+.footer-row-3 li:hover {
+	background: #11bcf4;
+}
+
+.footer-row-4 ul {
+	margin-top: 20px;
+}
+.footer-row-4 li {
+	color: #4a5e76;
+	width: 73%;
+	margin:0;
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+
+.footer-row-4 li p {
+	padding: 0 0 10px 0;
+	margin: 0;
+	font-weight: 100;
+}
+
+.footer-row-4 li:nth-child(2n+1) {
+	width: 25%;
+	color: white;
+}
+
+
+/* :::::::::::::::::::::: TEAM.HTML :::::::::::::::: */
+
+
+/* HEADER STYLES */
+
+header.our-trainers,
+header.about-header {
+	width: 100%;
+	height: 150px;
+	background: #454f5b;
+	clear: both;
+	overflow: hidden;
+	margin-top:80px;
+}
+
+.about-header-wrapper,
+.team-header-wrapper {
+	width: 1180px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+.our-trainers h1,
+.about-header h1 {
+	color: white;
+	padding: 10px 15px;
+	background: #11bcf4;
+	margin-top: 48px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 26px;
+	font-weight: 100;
+}
+
+
+/* TRAINER SECTION STYLES */
+
+.meet-trainers .top-text {
+	margin-top: 40px;
+}
+.meet-trainers {
+	background: white;
+	overflow: hidden;
+}
+
+.trainer-container {
+	/*width: 65%; - I changed this to a pixel width because I couldn't figure out a way to space my inner divs (whose widths are in pixels) evenly across it*/
+	width: 1180px;
+	/*background: orange;*/
+	margin: 0 auto;
+}
+
+.trainer-container ul {
+ 	margin: 0;
+ 	padding: 0;
+ 	list-style-type: none;
+}
+
+.trainer-top-clear {
+	width: 100%;
+	height: 250px;
+	position: relative;
+	text-align: center;
+}
+
+.trainer-info {
+	background: #0d1f35;
+	width: 100%;
+	height: 150px;
+	padding: 30px 20px ;
+	/*transition: 0.5s all ease-in-out;
+*/
+}
+
+.trainer-info p {
+	padding: 0;
+	padding-bottom: 15px;
+	margin: 0;
+	color: white;
+	font-weight: 100;
+	font-size: 15px;
+}
+
+.trainer-pic-1,
+.trainer-pic-5 {
+	margin-left: 0;
+}
+
+.trainer-pic-4,
+.trainer-pic-8 {
+	margin-right: 0;
+}
+
+.trainer-pic-2,
+.trainer-pic-6 {
+	margin-left: 20px;
+	margin-right: 10px;
+
+}
+
+.trainer-pic-3,
+.trainer-pic-7 {
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+.trainer-pic-1 {
+	background: url(../Images/trainer-01.jpg);
+}
+
+.trainer-pic-2 {
+	background: url(../Images/trainer-02.jpg);
+}
+
+.trainer-pic-3 {
+	background: url(../Images/trainer-03.jpg);
+}
+
+.trainer-pic-4 {
+	background: url(../Images/trainer-04.jpg);
+}
+
+.trainer-pic-5 {
+	background: url(../Images/trainer-05.jpg);
+}
+
+.trainer-pic-6 {
+	background: url(../Images/trainer-06.jpg);
+}
+
+.trainer-pic-7 {
+	background: url(../Images/trainer-07.jpg);
+}
+
+.trainer-pic-8 {
+	background: #e3e3e3;
+}
+
+.trainer-pic-8 img {
+	margin-top: 80px;
+}
+
+.trainer-pic-8 i {
+	font-size: 20px;
+	color: #11bcf4;
+	float: left;
+	margin: 15px 20px 25px 50px;
+}
+
+.trainer-pic-8:hover i {
+	color: #0d1f35;
+}
+
+.trainer-pic-8 i + p {
+	margin: 15px 20px 25px 30px;
+	text-transform: uppercase;
+}
+
+.trainer-pic {
+	width: 280px;
+	height: 400px;
+	margin-top: 40px;
+	margin-bottom: 80px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+}
+
+.trainer-top-clear .triangle-bottom-right {
+	border-top: 10px solid transparent;
+	border-right: 140px solid #0d1f35;
+	border-bottom: 10px solid #0d1f35;
+	border-left: 140px solid transparent;
+	z-index: 200;
+	/*transition: 0.5s all ease-in-out; - this transition resulted in a very jarring effect with the triangles*/
+
+}
+
+.trainer-pic:hover .trainer-info {
+	background: #11bcf4;
+}
+
+.trainer-pic:hover .triangle-bottom-right {
+	border-top: 10px solid transparent;
+	border-right: 140px solid transparent;
+	border-bottom: 10px solid #11bcf4;
+	border-left: 140px solid #11bcf4;
+	
+}
+
+
+/* ::::::::::::: ABOUT.HTML ::::::::::::::::: */
+
+.what-we-do {
+	width: 100%;
+	min-height: 880px;
+	background: white;
+	overflow: hidden;
+}
+
+.what-we-do-wrapper {
+	width: 65%;
+	height: 100%;
+	background: white;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.what-we-do img {
+	width: 1180px;
+	height: 584px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.what-we-do .top-text {
+	margin-top: 40px;
+}
+
+.what-we-do p {
+	line-height: 2;
+}
+
+/* TRAINING REQUIREMENTS SECTION */
+
+/* most styles for this section are the same as the "successful stories" section of index.html, so they can be found in that section of this file */
+.training-requirements {
+	overflow: hidden;
+}
+
+.training-requirements .top-text {
+	margin-bottom: 0;
+}
+.training-requirements p {
+	margin-left: 23%;
+}
+
+.training-div-1 {
+	width: 59%;
+}
+
+.training-image {
+	width: 41%;
+	position: relative;
+}
+.progress-bar-header {
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 10PX;
+	margin-left: 23%;
+}
+
+.progress-bar + p {
+	margin-top: -15px;
+	margin-bottom: 0;
+	margin-left: 23%;
+	padding: 0;
+}
+
+.progress-bar {
+	height: 5px;
+	float: left;
+	margin-right: 20px;
+	margin-left: 23%;
+	margin-bottom: 10px;
+	position: relative;
+	background: grey;
+}
+
+.motivation-bar {
+	width: 550px;
+	background: #11bcf2;
+}
+
+.motivation-bar +p {
+	color: #11bcf2;
+}
+
+.training-bar {
+	width: 350px;
+	background: #67bf37;
+}
+
+.training-bar + p {
+	color: #67bf37;
+}
+
+.cardio-bar {
+	width: 530px;
+	background: #fc6a2e;
+}
+
+.cardio-bar + p {
+	color: #fc6a2e;
+}
+
+.health-food-bar {
+	width: 540px;
+	background: #ee6ef9;
+}
+
+.health-food-bar + p {
+	color: #ee6ef9;
+}
+
+.training-triangle {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-top: 2.5px solid white;
+	border-right: 2px solid white;
+	border-bottom: 2.5px solid transparent;
+	border-left: 2px solid transparent;
+	z-index: 150;
+}
+
+.test-triangle {
+	border-top: 220px solid white;
+	border-right: 100px solid transparent;
+	border-bottom: 220px solid transparent;
+	border-left: 100px solid white;
+	position: absolute;
+	transform: rotate(360deg);
+}
+
+/* START TODAY SECTION */
+
+.start-today {
+	width: 100%;
+	height: 380px;
+	background: white;
+}
+
+.start-today-wrapper {
+	width: 65%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.start-today-wrapper .top-text {
+	margin-top: 100px;
+}
+
+.start-today-wrapper p {
+	margin-top: 30px;
+	line-height: 2;
+}
+
+.start-today button {
+	margin: 40px 10px;
+	padding: 15px 25px;
+	text-transform: uppercase;
+	color: white;
+	border: 0;
+}
+
+.sign-up-now {
+	background: #11bcf4;
+}
+
+.check-courses {
+	background: #0d1f35;
+}
